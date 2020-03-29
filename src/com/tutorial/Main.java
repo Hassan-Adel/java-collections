@@ -26,5 +26,11 @@ public class Main {
         var users = new GenericsList<User>();
 
         Utilities.printUsers(instructors);
+
+        users.add(user1);
+        users.add(user2);
+        for (var userInusers:users) {
+            System.out.println(userInusers);
+        }
     }
 }
