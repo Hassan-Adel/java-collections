@@ -1,5 +1,6 @@
 package com.tutorial;
 
+import com.tutorial.collections.CollectionsDemo;
 import com.tutorial.generics.GenericsList;
 
 public class Main {
@@ -32,5 +33,8 @@ public class Main {
         for (var userInusers:users) {
             System.out.println(userInusers);
         }
+
+        //Collections
+        CollectionsDemo.show();
     }
 }
