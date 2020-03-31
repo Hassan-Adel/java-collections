@@ -19,8 +19,18 @@ public class CollectionsDemo {
         //Array of objects
         collection.toArray();
         //Array of strings
-        collection.toArray(new String[collection.size()]);
+        String[] test = collection.toArray(new String[0]);
         System.out.println(collection);
         collection.clear();
+
+        //Compare two collections
+        Collection<String> other = new ArrayList<>();
+        other.addAll(collection);
+        //false by ref
+        System.out.println(collection == other);
+        //true by value
+        System.out.println(collection.equals(other));
+
+
     }
 }
