@@ -3,6 +3,7 @@ package com.tutorial;
 import com.tutorial.collections.CollectionsDemo;
 import com.tutorial.generics.GenericsList;
 import com.tutorial.models.Customer;
+import com.tutorial.models.EmailComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,10 +44,12 @@ public class Main {
         CollectionsDemo.show();
 
         List<Customer> customers = new ArrayList<>();
-        customers.add(new Customer("b"));
-        customers.add(new Customer("a"));
-        customers.add(new Customer("c"));
+        customers.add(new Customer("b", "e2"));
+        customers.add(new Customer("a", "e3"));
+        customers.add(new Customer("c", "e1"));
         Collections.sort(customers);
+        System.out.println(customers);
+        Collections.sort(customers, new EmailComparator());
         System.out.println(customers);
     }
 }
